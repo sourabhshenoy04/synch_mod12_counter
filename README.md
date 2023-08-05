@@ -10,7 +10,9 @@ against the expected results. Inputs: Clock, Reset. Expected Output:
 ## Abstract
 This project presents a synchronous modulo-12 counter design using D flip-flops in System Verilog. An object-oriented test bench is used to verify the counter’s functionality, comparing its output against the expected sequence (0000 to 1011). The test bench employs synchronous clock and asynchronous reset signals to simulate the counter’s behavior, ensuring accurate modulo-12 counting. This implementation can be applied to various digital systems requiring modulo counting such as frequency dividers and timing generators.
 ## Circuit Diagram / State Diagram
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./assets/circuitdiagram_mirrored.png)
+
+![App Screenshot](./assets/state_diagramupdated.png)
 ## Tech Stack
 
 **Programming Language Used:** System Verilog
@@ -65,7 +67,9 @@ inconsistencies between the simulated output and the expected output are
 logged and analyzed to verify the counter’s functionality. 
 ## Truth Table
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./assets/tt1.png)
+![App Screenshot](./assets/tt2.png)
+![App Screenshot](./assets/tt3.png)
 ## Breif Explaination of Code
 
 **i. d_flip_flop.sv:** 
@@ -131,7 +135,14 @@ Run this command to observe waveforms in GTKWave software:
 
 ## Screenshots of Outputs
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+Output in Terminal Window of VS Code using Icarus Software:
+
+![App Screenshot](./assets/output.png)
+
+Output Waveform using GTKWave:
+
+![App Screenshot](./assets/icaruscorrectopwaveform.png)
+
 
 
 ## Result and Discussion

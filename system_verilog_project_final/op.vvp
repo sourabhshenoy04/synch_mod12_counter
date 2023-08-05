@@ -1,0 +1,410 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2009.vpi";
+S_0000024057d0daf0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000024057d14630 .scope package, "counter_pkg" "counter_pkg" 3 3;
+ .timescale 0 0;
+C0000024057cc8510  .class "Mod12Counter" [3]
+   0: "clk", "b1"
+   1: "q", "b4"
+   2: "reset", "b1"
+ ;
+S_0000024057d2d760 .scope class, "Mod12Counter" "Mod12Counter" 3 4, 3 4 0, S_0000024057d14630;
+ .timescale 0 0;
+S_0000024057d2d8f0 .scope autofunction.void, "getOutput" "getOutput" 3 23, 3 23 0, S_0000024057d2d760;
+ .timescale 0 0;
+v0000024057d88550_0 .var/cobj "@";
+v0000024057d86e30_0 .var/2u "out", 3 0;
+TD_counter_pkg.Mod12Counter.getOutput ;
+    %load/obj v0000024057d88550_0;
+    %prop/v 2;
+    %pop/obj 1, 0;
+    %pad/u 32;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.0, 4;
+    %load/obj v0000024057d88550_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %store/vec4 v0000024057d86e30_0, 0, 4;
+T_0.0 ;
+    %end;
+S_0000024057d88ad0 .scope autofunction.obj, "new" "new" 3 10, 3 10 0, S_0000024057d2d760;
+ .timescale 0 0;
+v0000024057d885f0_0 .var/cobj "@";
+v0000024057d876f0_0 .var/2u "clk1", 0 0;
+v0000024057d86ed0_0 .var/2u "reset1", 0 0;
+TD_counter_pkg.Mod12Counter.new ;
+    %load/vec4 v0000024057d876f0_0;
+    %load/obj v0000024057d885f0_0;
+    %store/prop/v 0, 1; Store in bool property clk
+    %pop/obj 1, 0;
+    %load/vec4 v0000024057d86ed0_0;
+    %load/obj v0000024057d885f0_0;
+    %store/prop/v 2, 1; Store in bool property reset
+    %pop/obj 1, 0;
+    %end;
+S_0000024057d88c60 .scope autofunction.void, "update" "update" 3 15, 3 15 0, S_0000024057d2d760;
+ .timescale 0 0;
+v0000024057d88190_0 .var/cobj "@";
+v0000024057d87650_0 .var "reset", 0 0;
+TD_counter_pkg.Mod12Counter.update ;
+    %load/obj v0000024057d88190_0;
+    %prop/v 2;
+    %pop/obj 1, 0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.2, 8;
+    %pushi/vec4 0, 0, 4;
+    %load/obj v0000024057d88190_0;
+    %store/prop/v 1, 4; Store in bool property q
+    %pop/obj 1, 0;
+    %jmp T_2.3;
+T_2.2 ;
+    %load/obj v0000024057d88190_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %cmpi/u 15, 0, 4;
+    %jmp/0xz  T_2.4, 5;
+    %load/obj v0000024057d88190_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %addi 1, 0, 4;
+    %cast2;
+    %load/obj v0000024057d88190_0;
+    %store/prop/v 1, 4; Store in bool property q
+    %pop/obj 1, 0;
+    %jmp T_2.5;
+T_2.4 ;
+    %pushi/vec4 0, 0, 4;
+    %load/obj v0000024057d88190_0;
+    %store/prop/v 1, 4; Store in bool property q
+    %pop/obj 1, 0;
+T_2.5 ;
+T_2.3 ;
+    %end;
+S_0000024057d17870 .scope module, "countertb" "countertb" 4 3;
+ .timescale 0 0;
+v0000024057d8b190_0 .var "clk", 0 0;
+v0000024057d8ac90_0 .var/cobj "mod12counter_expected";
+v0000024057d8a150_0 .net "q", 3 0, L_0000024057d8a6f0;  1 drivers
+v0000024057d8b2d0_0 .var "reset", 0 0;
+v0000024057d8a290_0 .var/2u "temp", 3 0;
+S_0000024057d88df0 .scope module, "dut" "modulo12counter" 4 5, 5 3 0, S_0000024057d17870;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /OUTPUT 4 "q";
+L_0000024057d2ca60 .functor XOR 1, L_0000024057d8a650, L_0000024057d89cf0, C4<0>, C4<0>;
+L_0000024057d2cad0 .functor AND 1, L_0000024057d8b230, L_0000024057d8a970, C4<1>, C4<1>;
+L_0000024057d2cf30 .functor AND 1, L_0000024057d8a5b0, L_0000024057d89c50, C4<1>, C4<1>;
+L_0000024057d2c910 .functor AND 1, L_0000024057d8a330, L_0000024057d8b370, L_0000024057d89ed0, L_0000024057d89b10;
+L_0000024057d2c2f0 .functor OR 1, L_0000024057d2cad0, L_0000024057d2cf30, L_0000024057d2c910, C4<0>;
+L_0000024057d2c360 .functor AND 1, L_0000024057d8a3d0, L_0000024057d8aa10, C4<1>, C4<1>;
+L_0000024057d2cb40 .functor AND 1, L_0000024057d896b0, L_0000024057d8b410, C4<1>, C4<1>;
+L_0000024057d2cbb0 .functor AND 1, L_0000024057d8a470, L_0000024057d89bb0, L_0000024057d89d90, C4<1>;
+L_0000024057d2cec0 .functor OR 1, L_0000024057d2c360, L_0000024057d2cb40, L_0000024057d2cbb0, C4<0>;
+v0000024057d87b50_0 .net *"_ivl_15", 0 0, L_0000024057d8b230;  1 drivers
+v0000024057d88730_0 .net *"_ivl_17", 0 0, L_0000024057d8a970;  1 drivers
+v0000024057d88870_0 .net *"_ivl_19", 0 0, L_0000024057d8a5b0;  1 drivers
+v0000024057d88910_0 .net *"_ivl_21", 0 0, L_0000024057d89c50;  1 drivers
+v0000024057d87e70_0 .net *"_ivl_23", 0 0, L_0000024057d8a330;  1 drivers
+v0000024057d86d90_0 .net *"_ivl_25", 0 0, L_0000024057d8b370;  1 drivers
+v0000024057d889b0_0 .net *"_ivl_27", 0 0, L_0000024057d89ed0;  1 drivers
+v0000024057d87bf0_0 .net *"_ivl_29", 0 0, L_0000024057d89b10;  1 drivers
+v0000024057d87f10_0 .net *"_ivl_35", 0 0, L_0000024057d8a3d0;  1 drivers
+v0000024057d878d0_0 .net *"_ivl_37", 0 0, L_0000024057d8aa10;  1 drivers
+v0000024057d88230_0 .net *"_ivl_39", 0 0, L_0000024057d896b0;  1 drivers
+v0000024057d87790_0 .net *"_ivl_41", 0 0, L_0000024057d8b410;  1 drivers
+v0000024057d875b0_0 .net *"_ivl_43", 0 0, L_0000024057d8a470;  1 drivers
+v0000024057d87c90_0 .net *"_ivl_45", 0 0, L_0000024057d89bb0;  1 drivers
+v0000024057d87d30_0 .net *"_ivl_47", 0 0, L_0000024057d89d90;  1 drivers
+v0000024057d86b10_0 .net *"_ivl_7", 0 0, L_0000024057d8a650;  1 drivers
+v0000024057d87fb0_0 .net *"_ivl_9", 0 0, L_0000024057d89cf0;  1 drivers
+v0000024057d88050_0 .net "clk", 0 0, v0000024057d8b190_0;  1 drivers
+v0000024057d880f0_0 .net "q", 3 0, L_0000024057d8a6f0;  alias, 1 drivers
+v0000024057d882d0_0 .net "qb", 3 0, L_0000024057d8ae70;  1 drivers
+v0000024057d88370_0 .net "reset", 0 0, v0000024057d8b2d0_0;  1 drivers
+v0000024057d88410_0 .net "w1", 0 0, L_0000024057d2ca60;  1 drivers
+v0000024057d884b0_0 .net "w2", 0 0, L_0000024057d2cad0;  1 drivers
+v0000024057d89a70_0 .net "w3", 0 0, L_0000024057d2cf30;  1 drivers
+v0000024057d8a010_0 .net "w4", 0 0, L_0000024057d2c910;  1 drivers
+v0000024057d89f70_0 .net "w5", 0 0, L_0000024057d2c2f0;  1 drivers
+v0000024057d8a0b0_0 .net "w6", 0 0, L_0000024057d2c360;  1 drivers
+v0000024057d8b050_0 .net "w7", 0 0, L_0000024057d2cb40;  1 drivers
+v0000024057d8b0f0_0 .net "w8", 0 0, L_0000024057d2cbb0;  1 drivers
+v0000024057d8aab0_0 .net "w9", 0 0, L_0000024057d2cec0;  1 drivers
+L_0000024057d8a510 .part L_0000024057d8ae70, 0, 1;
+L_0000024057d8a650 .part L_0000024057d8a6f0, 0, 1;
+L_0000024057d89cf0 .part L_0000024057d8a6f0, 1, 1;
+L_0000024057d8b230 .part L_0000024057d8a6f0, 2, 1;
+L_0000024057d8a970 .part L_0000024057d8ae70, 1, 1;
+L_0000024057d8a5b0 .part L_0000024057d8a6f0, 2, 1;
+L_0000024057d89c50 .part L_0000024057d8ae70, 0, 1;
+L_0000024057d8a330 .part L_0000024057d8ae70, 3, 1;
+L_0000024057d8b370 .part L_0000024057d8ae70, 2, 1;
+L_0000024057d89ed0 .part L_0000024057d8a6f0, 1, 1;
+L_0000024057d89b10 .part L_0000024057d8a6f0, 0, 1;
+L_0000024057d8a3d0 .part L_0000024057d8a6f0, 3, 1;
+L_0000024057d8aa10 .part L_0000024057d8ae70, 1, 1;
+L_0000024057d896b0 .part L_0000024057d8a6f0, 3, 1;
+L_0000024057d8b410 .part L_0000024057d8ae70, 0, 1;
+L_0000024057d8a470 .part L_0000024057d8a6f0, 2, 1;
+L_0000024057d89bb0 .part L_0000024057d8a6f0, 1, 1;
+L_0000024057d89d90 .part L_0000024057d8a6f0, 0, 1;
+L_0000024057d8a6f0 .concat8 [ 1 1 1 1], v0000024057d87830_0, v0000024057d86cf0_0, v0000024057d86bb0_0, v0000024057d87470_0;
+L_0000024057d8ae70 .concat8 [ 1 1 1 1], v0000024057d871f0_0, v0000024057d88690_0, v0000024057d87010_0, v0000024057d87a10_0;
+S_0000024057d88f80 .scope module, "dff0" "d_flip_flop" 5 9, 6 3 0, S_0000024057d88df0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /INPUT 1 "reset";
+    .port_info 3 /OUTPUT 1 "q";
+    .port_info 4 /OUTPUT 1 "qb";
+v0000024057d887d0_0 .net "clk", 0 0, v0000024057d8b190_0;  alias, 1 drivers
+v0000024057d87970_0 .net "d", 0 0, L_0000024057d8a510;  1 drivers
+v0000024057d87830_0 .var "q", 0 0;
+v0000024057d871f0_0 .var "qb", 0 0;
+v0000024057d86f70_0 .net "reset", 0 0, v0000024057d8b2d0_0;  alias, 1 drivers
+E_0000024057d290f0 .event posedge, v0000024057d86f70_0, v0000024057d887d0_0;
+S_0000024057d89110 .scope module, "dff1" "d_flip_flop" 5 13, 6 3 0, S_0000024057d88df0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /INPUT 1 "reset";
+    .port_info 3 /OUTPUT 1 "q";
+    .port_info 4 /OUTPUT 1 "qb";
+v0000024057d87290_0 .net "clk", 0 0, v0000024057d8b190_0;  alias, 1 drivers
+v0000024057d87dd0_0 .net "d", 0 0, L_0000024057d2ca60;  alias, 1 drivers
+v0000024057d86cf0_0 .var "q", 0 0;
+v0000024057d88690_0 .var "qb", 0 0;
+v0000024057d87150_0 .net "reset", 0 0, v0000024057d8b2d0_0;  alias, 1 drivers
+S_0000024057d892a0 .scope module, "dff2" "d_flip_flop" 5 20, 6 3 0, S_0000024057d88df0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /INPUT 1 "reset";
+    .port_info 3 /OUTPUT 1 "q";
+    .port_info 4 /OUTPUT 1 "qb";
+v0000024057d870b0_0 .net "clk", 0 0, v0000024057d8b190_0;  alias, 1 drivers
+v0000024057d86c50_0 .net "d", 0 0, L_0000024057d2c2f0;  alias, 1 drivers
+v0000024057d86bb0_0 .var "q", 0 0;
+v0000024057d87010_0 .var "qb", 0 0;
+v0000024057d87330_0 .net "reset", 0 0, v0000024057d8b2d0_0;  alias, 1 drivers
+S_0000024057d89430 .scope module, "dff3" "d_flip_flop" 5 27, 6 3 0, S_0000024057d88df0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /INPUT 1 "reset";
+    .port_info 3 /OUTPUT 1 "q";
+    .port_info 4 /OUTPUT 1 "qb";
+v0000024057d873d0_0 .net "clk", 0 0, v0000024057d8b190_0;  alias, 1 drivers
+v0000024057d87510_0 .net "d", 0 0, L_0000024057d2cec0;  alias, 1 drivers
+v0000024057d87470_0 .var "q", 0 0;
+v0000024057d87a10_0 .var "qb", 0 0;
+v0000024057d87ab0_0 .net "reset", 0 0, v0000024057d8b2d0_0;  alias, 1 drivers
+S_0000024057d8b5d0 .scope task, "verify" "verify" 4 30, 4 30 0, S_0000024057d17870;
+ .timescale 0 0;
+v0000024057d8a1f0_0 .var/2u "clk", 0 0;
+v0000024057d899d0_0 .var/2u "reset", 0 0;
+TD_countertb.verify ;
+    %alloc S_0000024057d88c60;
+    %load/obj v0000024057d8ac90_0;
+    %store/obj v0000024057d88190_0;
+    %load/vec4 v0000024057d899d0_0;
+    %store/vec4 v0000024057d87650_0, 0, 1;
+    %callf/void TD_counter_pkg.Mod12Counter.update, S_0000024057d88c60;
+    %free S_0000024057d88c60;
+    %alloc S_0000024057d2d8f0;
+    %load/obj v0000024057d8ac90_0;
+    %store/obj v0000024057d88550_0;
+    %load/vec4 v0000024057d8a290_0;
+    %store/vec4 v0000024057d86e30_0, 0, 4;
+    %callf/void TD_counter_pkg.Mod12Counter.getOutput, S_0000024057d2d8f0;
+    %free S_0000024057d2d8f0;
+    %load/obj v0000024057d8ac90_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %store/vec4 v0000024057d8a290_0, 0, 4;
+    %load/vec4 v0000024057d8a150_0;
+    %load/obj v0000024057d8ac90_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %cmp/e;
+    %jmp/0xz  T_3.6, 4;
+    %delay 5, 0;
+    %load/obj v0000024057d8ac90_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %vpi_call/w 4 37 "$display", " Mod-12 Counter Output: %b, Expected Output: %b, Expected and Actual Output Matched", v0000024057d8a150_0, S<0,vec4,u4> {1 0 0};
+    %jmp T_3.7;
+T_3.6 ;
+    %delay 5, 0;
+    %load/obj v0000024057d8ac90_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %vpi_call/w 4 41 "$display", " Mod-12 Counter Output: %b, Expected Output: %b, Expected and Actual Output did not match", v0000024057d8a150_0, S<0,vec4,u4> {1 0 0};
+T_3.7 ;
+    %end;
+    .scope S_0000024057d88f80;
+T_4 ;
+    %wait E_0000024057d290f0;
+    %load/vec4 v0000024057d86f70_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_4.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000024057d87830_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000024057d871f0_0, 0, 1;
+    %jmp T_4.1;
+T_4.0 ;
+    %load/vec4 v0000024057d87970_0;
+    %store/vec4 v0000024057d87830_0, 0, 1;
+    %load/vec4 v0000024057d87830_0;
+    %inv;
+    %store/vec4 v0000024057d871f0_0, 0, 1;
+T_4.1 ;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_0000024057d89110;
+T_5 ;
+    %wait E_0000024057d290f0;
+    %load/vec4 v0000024057d87150_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_5.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000024057d86cf0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000024057d88690_0, 0, 1;
+    %jmp T_5.1;
+T_5.0 ;
+    %load/vec4 v0000024057d87dd0_0;
+    %store/vec4 v0000024057d86cf0_0, 0, 1;
+    %load/vec4 v0000024057d86cf0_0;
+    %inv;
+    %store/vec4 v0000024057d88690_0, 0, 1;
+T_5.1 ;
+    %jmp T_5;
+    .thread T_5;
+    .scope S_0000024057d892a0;
+T_6 ;
+    %wait E_0000024057d290f0;
+    %load/vec4 v0000024057d87330_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_6.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000024057d86bb0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000024057d87010_0, 0, 1;
+    %jmp T_6.1;
+T_6.0 ;
+    %load/vec4 v0000024057d86c50_0;
+    %store/vec4 v0000024057d86bb0_0, 0, 1;
+    %load/vec4 v0000024057d86bb0_0;
+    %inv;
+    %store/vec4 v0000024057d87010_0, 0, 1;
+T_6.1 ;
+    %jmp T_6;
+    .thread T_6;
+    .scope S_0000024057d89430;
+T_7 ;
+    %wait E_0000024057d290f0;
+    %load/vec4 v0000024057d87ab0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_7.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000024057d87470_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000024057d87a10_0, 0, 1;
+    %jmp T_7.1;
+T_7.0 ;
+    %load/vec4 v0000024057d87510_0;
+    %store/vec4 v0000024057d87470_0, 0, 1;
+    %load/vec4 v0000024057d87470_0;
+    %inv;
+    %store/vec4 v0000024057d87a10_0, 0, 1;
+T_7.1 ;
+    %jmp T_7;
+    .thread T_7;
+    .scope S_0000024057d17870;
+T_8 ;
+    %alloc S_0000024057d88ad0;
+    %new/cobj C0000024057cc8510;
+    %load/vec4 v0000024057d8b190_0;
+    %cast2;
+    %load/vec4 v0000024057d8b2d0_0;
+    %cast2;
+    %store/vec4 v0000024057d86ed0_0, 0, 1;
+    %store/vec4 v0000024057d876f0_0, 0, 1;
+    %store/obj v0000024057d885f0_0;
+    %callf/obj TD_counter_pkg.Mod12Counter.new, S_0000024057d88ad0;
+    %load/obj v0000024057d885f0_0;
+    %free S_0000024057d88ad0;
+    %store/obj v0000024057d8ac90_0;
+    %end;
+    .thread T_8, $init;
+    .scope S_0000024057d17870;
+T_9 ;
+    %vpi_call/w 4 13 "$dumpfile", "countertb.vcd" {0 0 0};
+    %vpi_call/w 4 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000024057d17870 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000024057d8b190_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000024057d8b2d0_0, 0, 1;
+    %delay 5, 0;
+    %load/obj v0000024057d8ac90_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %vpi_call/w 4 17 "$display", " Mod-12 Counter Output: %b, Expected Output: %b", v0000024057d8a150_0, S<0,vec4,u4> {1 0 0};
+    %delay 8, 0;
+    %load/vec4 v0000024057d8b2d0_0;
+    %inv;
+    %store/vec4 v0000024057d8b2d0_0, 0, 1;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0000024057d8a290_0, 0, 4;
+    %pushi/vec4 50, 0, 32;
+T_9.0 %dup/vec4;
+    %pushi/vec4 0, 0, 32;
+    %cmp/s;
+    %jmp/1xz T_9.1, 5;
+    %jmp/1 T_9.1, 4;
+    %pushi/vec4 1, 0, 32;
+    %sub;
+    %delay 5, 0;
+    %load/vec4 v0000024057d8b190_0;
+    %inv;
+    %store/vec4 v0000024057d8b190_0, 0, 1;
+    %jmp T_9.0;
+T_9.1 ;
+    %pop/vec4 1;
+    %vpi_call/w 4 24 "$finish" {0 0 0};
+    %end;
+    .thread T_9;
+    .scope S_0000024057d17870;
+T_10 ;
+    %wait E_0000024057d290f0;
+    %load/vec4 v0000024057d8b190_0;
+    %cast2;
+    %store/vec4 v0000024057d8a1f0_0, 0, 1;
+    %load/vec4 v0000024057d8b2d0_0;
+    %cast2;
+    %store/vec4 v0000024057d899d0_0, 0, 1;
+    %fork TD_countertb.verify, S_0000024057d8b5d0;
+    %join;
+    %jmp T_10;
+    .thread T_10;
+# The file index is used to find the file name in the following table.
+:file_names 7;
+    "N/A";
+    "<interactive>";
+    "-";
+    "counter_pkg.sv";
+    "countertb.sv";
+    "modulo12counter.sv";
+    "d_flip_flop.sv";

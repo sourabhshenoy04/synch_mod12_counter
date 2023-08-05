@@ -1,0 +1,466 @@
+$date
+	Fri Aug 04 12:54:29 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module countertb $end
+$var wire 4 ! q [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$var reg 4 $ temp [3:0] $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var wire 1 % w1 $end
+$var wire 1 & w2 $end
+$var wire 1 ' w3 $end
+$var wire 1 ( w4 $end
+$var wire 1 ) w5 $end
+$var wire 1 * w6 $end
+$var wire 1 + w7 $end
+$var wire 1 , w8 $end
+$var wire 1 - w9 $end
+$var wire 4 . qb [3:0] $end
+$var wire 4 / q [3:0] $end
+$scope module dff0 $end
+$var wire 1 " clk $end
+$var wire 1 0 d $end
+$var wire 1 # reset $end
+$var reg 1 1 q $end
+$var reg 1 2 qb $end
+$upscope $end
+$scope module dff1 $end
+$var wire 1 " clk $end
+$var wire 1 % d $end
+$var wire 1 # reset $end
+$var reg 1 3 q $end
+$var reg 1 4 qb $end
+$upscope $end
+$scope module dff2 $end
+$var wire 1 " clk $end
+$var wire 1 ) d $end
+$var wire 1 # reset $end
+$var reg 1 5 q $end
+$var reg 1 6 qb $end
+$upscope $end
+$scope module dff3 $end
+$var wire 1 " clk $end
+$var wire 1 - d $end
+$var wire 1 # reset $end
+$var reg 1 7 q $end
+$var reg 1 8 qb $end
+$upscope $end
+$upscope $end
+$scope task verify $end
+$var reg 1 9 clk $end
+$var reg 1 : reset $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0:
+09
+18
+07
+16
+05
+14
+03
+12
+01
+10
+b0 /
+b1111 .
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+b0 $
+1#
+0"
+b0 !
+$end
+#13
+0#
+#18
+1%
+00
+b1 $
+19
+b1110 .
+02
+b1 !
+b1 /
+11
+1"
+#23
+0"
+#28
+10
+b10 $
+12
+01
+b1101 .
+04
+b10 !
+b10 /
+13
+1"
+#33
+0"
+#38
+1)
+1(
+0%
+00
+b11 $
+b1100 .
+02
+b11 !
+b11 /
+11
+1"
+#43
+0"
+#48
+0(
+1'
+1&
+10
+b100 $
+12
+01
+14
+03
+b1011 .
+06
+b100 !
+b100 /
+15
+1"
+#53
+0"
+#58
+0'
+1%
+00
+b101 $
+b1010 .
+02
+b101 !
+b101 /
+11
+1"
+#63
+0"
+#68
+1'
+0&
+10
+b110 $
+12
+01
+b1001 .
+04
+b110 !
+b110 /
+13
+1"
+#73
+0"
+#78
+0)
+1-
+0'
+1,
+0%
+00
+b111 $
+b1000 .
+02
+b111 !
+b111 /
+11
+1"
+#83
+0"
+#88
+0,
+1+
+1*
+10
+b1000 $
+12
+01
+14
+03
+16
+05
+b111 .
+08
+b1000 !
+b1000 /
+17
+1"
+#93
+0"
+#98
+0+
+1%
+00
+b1001 $
+b110 .
+02
+b1001 !
+b1001 /
+11
+1"
+#103
+0"
+#108
+1+
+0*
+10
+b1010 $
+12
+01
+b101 .
+04
+b1010 !
+b1010 /
+13
+1"
+#113
+0"
+#118
+0-
+0+
+0%
+00
+b1011 $
+b100 .
+02
+b1011 !
+b1011 /
+11
+1"
+#123
+0"
+#128
+10
+b1100 $
+12
+01
+14
+03
+b1111 .
+18
+b0 !
+b0 /
+07
+1"
+#133
+0"
+#138
+1%
+00
+b1101 $
+b1110 .
+02
+b1 !
+b1 /
+11
+1"
+#143
+0"
+#148
+10
+b1110 $
+12
+01
+b1101 .
+04
+b10 !
+b10 /
+13
+1"
+#153
+0"
+#158
+1)
+1(
+0%
+00
+b1111 $
+b1100 .
+02
+b11 !
+b11 /
+11
+1"
+#163
+0"
+#168
+0(
+1'
+1&
+10
+b0 $
+12
+01
+14
+03
+b1011 .
+06
+b100 !
+b100 /
+15
+1"
+#173
+0"
+#178
+0'
+1%
+00
+b1 $
+b1010 .
+02
+b101 !
+b101 /
+11
+1"
+#183
+0"
+#188
+1'
+0&
+10
+b10 $
+12
+01
+b1001 .
+04
+b110 !
+b110 /
+13
+1"
+#193
+0"
+#198
+0)
+1-
+0'
+1,
+0%
+00
+b11 $
+b1000 .
+02
+b111 !
+b111 /
+11
+1"
+#203
+0"
+#208
+0,
+1+
+1*
+10
+b100 $
+12
+01
+14
+03
+16
+05
+b111 .
+08
+b1000 !
+b1000 /
+17
+1"
+#213
+0"
+#218
+0+
+1%
+00
+b101 $
+b110 .
+02
+b1001 !
+b1001 /
+11
+1"
+#223
+0"
+#228
+1+
+0*
+10
+b110 $
+12
+01
+b101 .
+04
+b1010 !
+b1010 /
+13
+1"
+#233
+0"
+#238
+0-
+0+
+0%
+00
+b111 $
+b100 .
+02
+b1011 !
+b1011 /
+11
+1"
+#243
+0"
+#248
+10
+b1000 $
+12
+01
+14
+03
+b1111 .
+18
+b0 !
+b0 /
+07
+1"
+#253
+0"
+#258
+1%
+00
+b1001 $
+b1110 .
+02
+b1 !
+b1 /
+11
+1"
+#263
+0"

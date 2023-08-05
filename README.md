@@ -175,12 +175,12 @@ synchronous-up-counter-30160762.aspx. Referred on 23-07-2023.
 https://www.chipverify.com/systemverilog/systemverilog-tutorial. Referred on 
 25-07-2023. 
 
-[3] YouTube Video: Techno Tutorials (e-Learning). October 6, 2021. MOD 12 
+[3] Website: Manishkj116. Counter Design using verilog HDL. 
+GeeksForGeeks.https://www.geeksforgeeks.org/counter-design-using-verilog-hdl/. Referred on 25-07-2023. 
+
+[4] YouTube Video: Techno Tutorials (e-Learning). October 6, 2021. MOD 12 
 Synchronous Up Counter Using D Flip Flop | MOD 12 Counter | Digital 
 electronics. https://youtu.be/ZBIl31r4lYM. Referred on 23-07-2023. 
-
-[4] YouTube Video: Manishkj116. Counter Design using verilog HDL. 
-GeeksForGeeks.https://www.geeksforgeeks.org/counter-design-using-verilog-hdl/. Referred on 25-07-2023. 
 
 [5] YouTube Video: ElectroTech CC. October 19, 2020. 4-bit Mod-12 Synchronous 
 Counter using D flip-flop || Sequential Logic Circuit | Digital Electronics. 

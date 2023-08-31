@@ -13,9 +13,9 @@ The synchronous modulo-12 counter is a vital digital circuit widely used in vari
 ## Abstract
 This project presents a synchronous modulo-12 counter design using D flip-flops in System Verilog. An object-oriented test bench is used to verify the counter’s functionality, comparing its output against the expected sequence (0000 to 1011). The test bench employs synchronous clock and asynchronous reset signals to simulate the counter’s behavior, ensuring accurate modulo-12 counting. This implementation can be applied to various digital systems requiring modulo counting such as frequency dividers and timing generators.
 ## Circuit Diagram / State Diagram
-![App Screenshot](./assets/circuitdiagram_mirrored.png)
+![App Screenshot](./assets/circuitdiagram_mirroredupd.jpg)
 
-![App Screenshot](./assets/state_diagramupdated.png)
+![App Screenshot](./assets/state_diagramupdatedupd.jpg)
 ## Tech Stack
 
 **Programming Language Used:** System Verilog

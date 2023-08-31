@@ -7,6 +7,9 @@ functionality. Treat the DUT as a black box and compare the output
 against the expected results. Inputs: Clock, Reset. Expected Output:
 0000, 0001, 0010, 0011, ..., 1010, 1011.
 
+## About
+The synchronous modulo-12 counter is a vital digital circuit widely used in various  applications including frequency dividers, frequency synthesizers and event  sequencers. Its purpose is to count in a cyclical pattern from 0000 to 1011.
+
 ## Abstract
 This project presents a synchronous modulo-12 counter design using D flip-flops in System Verilog. An object-oriented test bench is used to verify the counter’s functionality, comparing its output against the expected sequence (0000 to 1011). The test bench employs synchronous clock and asynchronous reset signals to simulate the counter’s behavior, ensuring accurate modulo-12 counting. This implementation can be applied to various digital systems requiring modulo counting such as frequency dividers and timing generators.
 ## Circuit Diagram / State Diagram

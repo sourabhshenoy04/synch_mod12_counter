@@ -136,7 +136,7 @@ Run this command to observe waveforms in GTKWave software:
 
 
 
-## Screenshots of Outputs
+## Obtained Outputs
 
 Output in Terminal Window of VS Code using Icarus Software:
 

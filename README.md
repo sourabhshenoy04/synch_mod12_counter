@@ -146,6 +146,10 @@ Output Waveform using GTKWave:
 
 ![App Screenshot](./assets/icaruscorrectopwaveform.png)
 
+Implementation of Code on FPGA Device:
+
+https://github.com/sourabhshenoy04/synch_mod12_counter/assets/105969078/76936256-a43f-465f-a372-45e3ebdd6081
+
 
 
 ## Result and Discussion

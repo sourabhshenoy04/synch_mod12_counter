@@ -22,6 +22,8 @@ This project presents a synchronous modulo-12 counter design using D flip-flops 
 
 **Software Used:** Vivado ML 2023.1, Icarus Verilog, VS Code, GTKWave. 
 
+**Hardware Used:** Spartan 3
+
 
 
 

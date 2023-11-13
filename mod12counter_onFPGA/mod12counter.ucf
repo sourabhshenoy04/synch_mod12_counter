@@ -1,0 +1,16 @@
+# PlanAhead Generated physical constraints 
+
+NET "segment[7]" LOC = P1;
+NET "segment[6]" LOC = P12;
+NET "segment[5]" LOC = P14;
+NET "segment[4]" LOC = P15;
+NET "segment[3]" LOC = P17;
+NET "segment[2]" LOC = P21;
+NET "segment[1]" LOC = P22;
+NET "segment[0]" LOC = P24;
+NET "ctrl[3]" LOC = P30;
+NET "ctrl[2]" LOC = P29;
+NET "ctrl[1]" LOC = P27;
+NET "ctrl[0]" LOC = P26;
+NET "clk" LOC = P55;
+NET "reset" LOC = P80;

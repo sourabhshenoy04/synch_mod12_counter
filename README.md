@@ -121,6 +121,21 @@ after a short delay. The 'verify' task compares 'q' with expected output from th
 ‘Mod12Counter’ class. The results are displayed at each positive clock edge to 
 ensure the counter's correctness.
 
+FPGA codes:
+
+**vi. mod12counter.v:**
+This Verilog code defines a synchronous modulo-12 counter implemented using D flip-flops. The main module, mod12counter, takes a clock (clk) and a reset signal (reset) as inputs and outputs the counter value (q), display segments (segment), and a control signal (ctrl). The code uses divided clock signals (clkdiv and clkdiv2) to control different sections of the circuit. The counter logic, triggered by the positive edge of clkdiv2, updates the counter value and corresponding display segments based on a case statement. The circuit includes D flip-flops and logic gates to implement the modulo-12 behavior. The reset signal resets the counter, and the clock signal (clk) governs the overall operation. In essence, this code creates a modulo-12 counter with display functionality, suitable for FPGA implementation.
+
+**vii. mod12counter.ucf:**
+- The 8 bits of the "segment" output are assigned to specific pins on your FPGA. For example, "segment[7]" is assigned to pin P1, "segment[6]" to P12, and so on.
+
+- The 4 bits of the "ctrl" output are also assigned to specific pins. "ctrl[3]" is assigned to pin P30, "ctrl[2]" to P29, "ctrl[1]" to P27, and "ctrl[0]" to P26.
+
+- The clock signal "clk" is assigned to pin P55.
+
+- The reset signal "reset" is assigned to pin P80.
+
+
 ## Running Tests
 
 Run this command in terminal window of VS Code / Windows Terminal to compile the files:
